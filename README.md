@@ -18,3 +18,13 @@ Tested the design with 64 randomly chosen pairs of numbers and input carry to be
 
 A glimpse of the testbench:
 ![test_bench](https://github.com/Sarkar22/Logarithic_Adder/blob/main/test_bench.PNG)
+
+It is formatted as such:
+a[16-bit] b[16-bit] cin[single bit] sum[16-bit] cout[single bit]
+
+As we are adding 32bit numbers here, there will be 6 stages.
+A & B has been taken as 32-bit numbers, and Cin (C0) has been taken as a single bit.
+For the first stage we calculated as following:
+G[i] = A[i] and B[i], P[i] = A[i] xor B[i] , and Cout[i+1] = A[i] or (B[i] and Cin[i])
+For rest of the stages (n denoted as stage number)
+Gn[i,i-1] = Gn-1[i] or (Gn-1[i-1] and Pn-1[i]), Pn[i,i-1] = Pn[i] and Pn-1[i-1]

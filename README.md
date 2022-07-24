@@ -15,3 +15,6 @@ Using the outputs of the tree above, a structural VHDL code for generating the b
 Tested the final adder with a test bench which reads pairs of 32 bit words and a single bit input carry from a file, adds them and compares the result with the expected 32 bit sum and 1 bit carry values stored in the same file.
 It uses assert statements to flag errors if there is a mismatch between the computed sum/carry and the stored sum/carry.
 Tested the design with 64 randomly chosen pairs of numbers and input carry to be added.
+
+A glimpse of the testbench:
+![test_bench](https://github.com/Sarkar22/Logarithic_Adder/blob/main/test_bench.PNG)
